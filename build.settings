@@ -1,0 +1,32 @@
+settings = {
+	orientation =
+	{
+		default = "landscapeRight",
+	},
+	
+	androidPermissions =
+    {
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.INTERNET"
+    },
+	
+	iphone =
+	{
+		plist=
+		{
+			UIAppFonts = {
+				"Komikoz.ttf"
+			},
+			
+			UIStatusBarHidden=true,
+			UIPrerenderedIcon=true,
+			UIApplicationExitsOnSuspend = false,
+	        CFBundleIconFile = "Icon.png",
+	        CFBundleIconFiles = {
+	           "Icon.png", 
+	           "Icon@2x.png", 
+	           "Icon-72.png", 
+	        },
+		},
+	}
+}
