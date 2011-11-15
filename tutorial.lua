@@ -32,8 +32,13 @@ function nextSlide()
 	
 	if counter == 3 then
 		
-		slide3.isVisible = false
-		slide4.isVisible = true
+		if _G.firstPlay then
+			globalLayer:removeEventListener("tap", nextSlide)
+			director:changeScene("level1", "fade")
+		else
+			slide3.isVisible = false
+			slide4.isVisible = true
+		end
 		
 	end
 	
