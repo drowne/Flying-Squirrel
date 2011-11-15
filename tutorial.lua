@@ -40,7 +40,12 @@ function nextSlide()
 	if counter == 4 then
 		
 		globalLayer:removeEventListener("tap", nextSlide)
-		director:changeScene("menu", "fade")
+
+		if _G.firstPlay then
+			director:changeScene("level1", "fade")
+		else
+			director:changeScene("menu", "fade")
+		end	
 	
 	end
 	

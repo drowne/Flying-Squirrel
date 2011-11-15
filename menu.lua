@@ -9,15 +9,15 @@ display.setStatusBar(display.HiddenStatusBar)
 local mainGroup = display.newGroup()
 
 function playGame()
-	
-	director:changeScene("level1", "fade")
-	
+	if _G.firstPlay then 
+		director:changeScene("tutorial", "fade")
+	else
+		director:changeScene("level1", "fade")
+	end	
 end
 
 function help()
-	
 	director:changeScene("tutorial", "fade")
-	
 end
 
 function loadHighScore()
