@@ -553,8 +553,9 @@ end
 function setScore( score )
 
 	scoreText.text = math.floor(score);
-	scoreText.x = 200
-	scoreText:setReferencePoint(display.TopLeftReferencePoint)
+	scoreText:setReferencePoint(display.BottomLeftReferencePoint)
+ 	scoreText.x = 200
+	scoreText.y = 92
 	globalScore = scoreText.text + _G.bonus
 	
 	if _G.bonus > 9999 then
@@ -569,7 +570,10 @@ function setScore( score )
 
 	bonusText.text = _G.bonus;
 	bonusText.x = _W
-	bonusText:setReferencePoint(display.TopRightReferencePoint)
+	bonusText.y = 92
+	bonusText:setReferencePoint(display.BottomRightReferencePoint)
+
+	print(scoreText.y, bonusText.y)
 
 end
 
